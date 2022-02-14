@@ -1304,6 +1304,9 @@ RouterResultCode IndexRouter::ProcessLeapsJoints(vector<Segment> const & input,
       ASSERT_LESS(start, input.size(), ());
       ASSERT_LESS(end, input.size(), ());
 
+      /// @todo I don't like this strategy with clearing previous caches, taking into account
+      /// that all MWMs was quite likely loaded before in calculating Leaps path.
+      /// Better to make a lru-cache with fixed capacity in IndexGraphLoader.
       // Clear previous loaded graphs to not spend too much memory at one time.
       worldGraph.ClearCachedGraphs();
 
