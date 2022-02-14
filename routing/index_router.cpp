@@ -243,7 +243,7 @@ double IndexRouter::BestEdgeComparator::GetSquaredDist(Edge const & edge) const
 // IndexRouter ------------------------------------------------------------------------------------
 IndexRouter::IndexRouter(VehicleType vehicleType, bool loadAltitudes,
                          CountryParentNameGetterFn const & countryParentNameGetterFn,
-                         TCountryFileFn const & countryFileFn, CourntryRectFn const & countryRectFn,
+                         TCountryFileFn const & countryFileFn, CountryRectFn const & countryRectFn,
                          shared_ptr<NumMwmIds> numMwmIds, unique_ptr<m4::Tree<NumMwmId>> numMwmTree,
                          traffic::TrafficCache const & trafficCache, DataSource & dataSource)
   : m_vehicleType(vehicleType)
